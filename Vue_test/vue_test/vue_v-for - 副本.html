@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="./vue.min.js"></script>
+<script src="vue-resource.js"></script>
+</head>
+<body>
+<div id="app">
+  <!-- <ol>
+    <li v-for="(value, key, index) in sites">
+      {{ value.name }}与{{ value.lognname }}{{value}}+{{key}}
+    </li>
+  </ol> -->
+</div>
+
+<script>
+var demo = new Vue({
+  el: '#app',
+  /*data: {
+    sites: [
+      { name: 'Runoob' ,lognname:"abc"},
+      { name: 'Google' ,lognname:"efg"},
+      { name: 'Taobao' ,lognname:"hik"}
+    ]
+  },*/
+  data: {
+            show: false,
+            gridColumns: [{
+                name: 'brandId',
+                isKey: true
+            }, {
+                name: 'name'
+            }, {
+                name: 'photo'
+            }],
+            gridData: [],
+            apiUrl: 'http://api.tb-bihaohuo.cn/Home/brands',
+            item: {}
+        },
+    created: function () {
+    // `this` 指向 vm 实例
+    console.log("adfv");
+    //alert("kdik");
+  },
+  beforeMount: function () {
+    // `this` 指向 vm 实例
+    console.log("mounted之前");
+    //alert("kdik");
+  },
+    mounted:function () {
+    // `this` 指向 vm 实例
+    console.log("实例");
+    //alert("kdik");
+  }
+})
+</script>
+</body>
+</html>
